@@ -41,6 +41,7 @@ public class Combina {
             PdfContentByte cb = writer.getDirectContent();
 
             for (InputStream in : list) {
+                PdfReader.unethicalreading = true;
                 PdfReader reader = new PdfReader(in);
                 for (int i = 1; i <= reader.getNumberOfPages(); i++) {
                     document.newPage();
